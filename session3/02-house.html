@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Draw a house</title>
+</head>
+<body>
+  <h1>Draw a house</h1>
+
+  <canvas id="myCanvas" width="400" height="300" style="border: 1px solid black;"></canvas>
+
+  <script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // 0. Sky first: it is the bottom layer
+    ctx.fillStyle = "lightblue";
+    ctx.fillRect(0, 0, 400, 300);
+
+    // 1. Walls: a brown rectangle
+    ctx.fillStyle = "sienna";
+    ctx.fillRect(100, 150, 200, 130);
+
+    // 2. Roof: three points joined by lines
+    ctx.fillStyle = "tomato";
+    ctx.beginPath();
+    ctx.moveTo(80, 150);   // left corner
+    ctx.lineTo(200, 60);   // top
+    ctx.lineTo(320, 150);  // right corner
+    ctx.closePath();       // back to the start
+    ctx.fill();
+
+    // 3. Door: a small dark rectangle
+    ctx.fillStyle = "#3b2314";
+    ctx.fillRect(180, 210, 40, 70);
+
+    // 4. Sun: a full circle
+    ctx.fillStyle = "gold";
+    ctx.beginPath();
+    ctx.arc(340, 50, 30, 0, Math.PI * 2);
+    ctx.fill();
+  </script>
+</body>
+</html>

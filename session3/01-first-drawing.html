@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My first canvas drawing</title>
+</head>
+<body>
+  <h1>My first canvas drawing</h1>
+
+  <!-- The paper: a 400 x 300 drawing area. The style part just draws a frame (CSS is next session). -->
+  <canvas id="myCanvas" width="400" height="300" style="border: 1px solid black;"></canvas>
+
+  <script>
+    // 1. find the paper
+    const canvas = document.getElementById("myCanvas");
+    // 2. get the pen
+    const ctx = canvas.getContext("2d");
+    // 3. pick a color
+    //ctx.fillStyle = "gold";
+    // 4. draw! across, down, wide, tall
+    //ctx.fillRect(100, 80, 30, 40);
+
+    
+     ctx.fillStyle = "gold";
+     ctx.beginPath();
+     ctx.arc(300, 80, 40, 0, Math.PI * 2);
+     ctx.fill();
+     ctx.font = "24px Arial";
+     ctx.fillStyle = "navy";
+     ctx.fillText("Your name here", 50, 200);
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Where am I?</title>
+</head>
+<body>
+  <h1>Where am I?</h1>
+  <p>This page uses your location only to show it to you. Nothing is saved.</p>
+
+  <button id="findMe">Find my location</button>
+  <p id="out">Click the button to see your location.</p>
+
+  <script>
+    const button = document.getElementById("findMe");
+    const out = document.getElementById("out");
+
+    // Ask only after a click, never on page load
+    button.addEventListener("click", () => {
+      if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            // SUCCESS: the user clicked Allow
+            out.textContent =
+              pos.coords.latitude + ", " + pos.coords.longitude;
+          },
+          () => {
+            // ERROR: blocked, or the location could not be found
+            out.textContent = "No location.";
+          }
+        );
+      }
+    });
+  </script>
+</body>
+</html>

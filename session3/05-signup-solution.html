@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up for the Coding Club</title>
+  <meta name="description" content="Join the coding club: sign up with your name, email and postal code.">
+
+  <!-- PREVIEW (slide 22): CSS, which we learn next session -->
+  <style>
+    input:valid {
+      border: 2px solid green;
+    }
+    input:user-invalid {
+      border: 2px solid crimson;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sign up</h1>
+
+  <form>
+    <!-- Slide 20: required and input types -->
+    <p>
+      <label for="name">Name</label>
+      <input id="name" type="text" required>
+    </p>
+    <p>
+      <label for="email">Email</label>
+      <input id="email" type="email" required>
+      <span id="msg"></span>
+    </p>
+    <p>
+      <label for="age">Age</label>
+      <input id="age" type="number" min="18" max="99">
+    </p>
+    <p>
+      <label for="password">Password</label>
+      <input id="password" type="password" minlength="8" required>
+    </p>
+
+    <!-- Slide 21: pattern + title -->
+    <p>
+      <label for="postcode">Postal code</label>
+      <input id="postcode" type="text" pattern="[0-9]{5}"
+             title="Enter exactly 5 digits" required>
+    </p>
+
+    <button>Sign up</button>
+  </form>
+
+  <!-- PREVIEW (slide 23): JavaScript feedback while the user types -->
+  <script>
+    const email = document.getElementById("email");
+    const msg = document.getElementById("msg");
+
+    email.addEventListener("input", () => {
+      if (email.validity.valid) {
+        msg.textContent = "Looks good!";
+      } else {
+        msg.textContent = "Try: name@example.com";
+      }
+    });
+  </script>
+</body>
+</html>
