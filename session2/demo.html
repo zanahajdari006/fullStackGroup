@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 2 Demo - Modern HTML5</title>
+</head>
+<body>
+  <!-- Slides 4–7: the semantic skeleton -->
+  <header>My Site</header>
+  <nav>Links go here</nav>
+
+  <main>
+    <article>My first post</article>
+
+    <!-- Slides 11–15: forms -->
+    <form>
+      <!-- Slide 11: clicking the label puts the cursor in the box (for = id) -->
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name">
+
+      <!-- Slide 13: free email validation. Try: empty, "notanemail", "a@b" -->
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Slide 14: date picker. Also try type="time", "month", "week" -->
+      <label for="trip-date">Departure Date</label>
+      <input type="date" id="trip-date" name="trip-date">
+
+      <!-- Slide 15: labels left out only to keep the demo short.
+           To show the number limit, fill in the email first, then type 50 here. -->
+      <input type="color" value="#ff0000">
+      <input type="range" min="0" max="100">
+      <input type="number" min="1" max="10">
+
+      <input type="submit" value="Send">
+    </form>
+
+    <!-- Slide 18: audio with two formats and fallback text -->
+    <audio controls>
+      <source src="media/episode.mp3" type="audio/mpeg">
+      <source src="media/episode.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Slides 20–21: video with a poster and captions (open through Live Server) -->
+    <video controls width="640" height="360" poster="media/thumbnail.jpg">
+      <source src="media/highlights.mp4" type="video/mp4">
+      <source src="media/highlights.webm" type="video/webm">
+      <track src="media/captions-en.vtt" kind="captions" srclang="en" label="English">
+      Your browser does not support video.
+    </video>
+
+    <!-- Slide 25: eiffel-tower.jpg is missing on purpose, so the alt text shows -->
+    <img src="eiffel-tower.jpg"
+         alt="The Eiffel Tower at sunset, viewed from the Trocadéro gardens">
+  </main>
+
+  <footer>© 2026</footer>
+</body>
+</html>
