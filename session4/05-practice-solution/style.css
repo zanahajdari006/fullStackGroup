@@ -1,0 +1,34 @@
+/* Task 2: the whole page - a font with backups, roomy lines */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: darkslategray;
+  background-color: whitesmoke;
+}
+
+/* Task 2: a centred main heading */
+h1 {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+/* Task 3: every section becomes a card */
+section {
+  background-color: white;
+  max-width: 600px;
+  padding: 20px;
+  border: 2px solid lightgray;
+  margin: 24px auto;
+  box-sizing: border-box;
+}
+
+/* Task 4: links inside the nav - bold, no underline */
+nav a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Bonus: one highlighted paragraph */
+.highlight {
+  background-color: lightyellow;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styling text</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      color: darkslategray;
+    }
+
+    h1, h2 {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      letter-spacing: 4px;
+    }
+
+    .tagline {
+      text-align: center;
+      font-style: italic;
+      word-spacing: 6px;
+    }
+
+    h2 {
+      font-weight: normal;
+    }
+
+    /* Step 5: decoration. A line through the old price ... */
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    /* ... and no underline on the link, made bold instead */
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: darkred;
+    }
+
+    .small-print {
+      font-size: 14px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <h1>Corner Café</h1>
+  <p class="tagline">Coffee, tea and the best macchiato in town</p>
+
+  <h2>Today's specials</h2>
+  <p>Macchiato: 1.00 € <span class="old-price">1.50 €</span></p>
+  <p>Fresh orange juice: 2.00 €</p>
+  <p>Baklava: 1.50 €</p>
+
+  <p><a href="https://www.example.com">See us on the map</a></p>
+
+  <p class="small-print">Prices include VAT.</p>
+</body>
+</html>

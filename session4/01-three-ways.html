@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three ways to add CSS</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    
+    .note {
+      background-color: lightyellow;
+    }
+
+    #intro {
+      background-color: lavender;
+    }
+  </style>
+</head>
+<body>
+  <h1>My first styled page</h1>
+
+  <p id="intro">This paragraph has an id, so CSS can find exactly this one.</p>
+
+  <h2>Notes</h2>
+  <p class="note">This paragraph has the class "note".</p>
+  <p class="note">So does this one. One class, many elements.</p>
+
+  <p style="color: crimson;">Inline style: only this paragraph is red.</p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <!-- Task 1: the link to the external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="top">
+    <h1>Your Name</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About me</h2>
+      <p>I'm learning web development at ROI Academy.</p>
+      <!-- Bonus: a class on one paragraph -->
+      <p class="highlight">Right now I'm learning CSS.</p>
+      <!-- Use your own photo; until me.jpg exists, the alt text shows -->
+      <img src="me.jpg" alt="Me hiking in the mountains, smiling at the camera">
+    </section>
+
+    <section id="contact">
+      <h2>Contact me</h2>
+      <form>
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required>
+
+        <input type="submit" value="Send">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Your Name</p>
+    <a href="#top" aria-label="Back to top">↑</a>
+  </footer>
+</body>
+</html>
